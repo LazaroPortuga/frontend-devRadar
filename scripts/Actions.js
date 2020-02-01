@@ -139,6 +139,46 @@ class Actions {
         return result
     }
 
+    addUser(dev){
+
+        let li = document.createElement('li')
+        li.dataset._id = dev._id
+        li.className = "dev-item";
+        let header = document.createElement('header')
+        let img = document.createElement('img')
+        let div = document.createElement('div')
+        let h3 = document.createElement('h3')
+        let span = document.createElement('span')
+        let a = document.createElement('a')
+        let p = document.createElement('p')
+        let divBtn = document.createElement('div')
+        divBtn.className = "btn"
+        let button = document.createElement('button')
+        button.appendChild(document.createTextNode("Editar"))
+        button.className = "action-edit"
+        
+        div.className = "dev-info"
+        h3.appendChild(document.createTextNode(dev.name))
+        div.appendChild(h3)
+        span.appendChild(document.createTextNode(this.techsParser(dev.techs)))
+        div.appendChild(span)
+        img.src = dev.avatar_url
+        header.appendChild(img)
+        header.appendChild(div)
+        p.appendChild(document.createTextNode(dev.bio))
+        a.href = `https://github.com/${dev.github_username}`
+        a.appendChild(document.createTextNode("Perfil Github"))
+        divBtn.appendChild(button)
+        
+        li.appendChild(header)
+        li.appendChild(p)
+        li.appendChild(a)
+        li.appendChild(divBtn)
+
+        this.ul.appendChild(li)
+        return li
+    }
+
 }
 
 
