@@ -134,6 +134,11 @@ class Actions {
         })
     }
 
+    infoUser(objectUser){
+        let result =  objectUser.target.dataset.info ? JSON.parse(objectUser.target.dataset.info) : JSON.parse(objectUser.toElement.dataset.info)
+        return result
+    }
+
 }
 
 
