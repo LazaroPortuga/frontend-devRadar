@@ -63,6 +63,27 @@ class Actions {
         })
     }
 
+    actionsBntFormEdition(){
+        const btnCancel = document.querySelector("button.cancel")
+        const btnSave = document.querySelector("button.save")
+
+        btnCancel.addEventListener('click', event=>{
+            event.preventDefault()
+            this.removeForm()
+        })
+
+        btnSave.addEventListener('click', event=>{
+            let inptusUp = document.querySelectorAll("#form-data-up input")
+            event.preventDefault();
+            let bodyInfo = this.valueInputs(inptusUp)
+
+            this.update(bodyInfo)
+                .then(result=>{
+                    this.updateInfo(result)
+            })
+        })
+    }
+
 
 }
 
