@@ -179,6 +179,18 @@ class Actions {
         return li
     }
 
+    static blockInputs(){
+        let inputs = document.querySelectorAll('#form-data-up input')
+        const types = ['latitude', 'longitude', 'user_name']
+
+        inputs.forEach(input => {
+            if(types.indexOf(input.name) > -1) {
+                input.setAttribute('readonly','readonly')
+                input.style.cursor = 'not-allowed'
+            }
+        })
+    }
+
 }
 
 
