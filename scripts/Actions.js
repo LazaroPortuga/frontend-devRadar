@@ -39,6 +39,30 @@ class Actions {
         return inputsValue
     }
 
+    sendForm(){
+        let form = document.querySelector("#form-data")
+        let btn = document.querySelector('button[type=submit]')
+
+        form.addEventListener("submit", event=> {
+            event.preventDefault()
+            let bodyInfo = this.valueInputs(this.formInputs);
+            let result = this.save(bodyInfo)
+            result.then(dev=>{
+                let li = this.addUser(dev)
+                    this.addDataDev(dev, true)
+                    this.editOne(li.querySelector('button.action-edit'))
+                btn.innerHTML = "Usuário salvo"
+                btn.classList.add('saved')
+                form.reset()
+            })
+
+            setTimeout(()=>{
+                btn.classList.remove('saved')
+                btn.innerHTML = "Enviar"
+            },4000)
+        })
+    }
+
 
 }
 
