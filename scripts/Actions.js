@@ -207,6 +207,14 @@ class Actions {
         alert(`seu navegador é o ${nvt}`) 
     }
 
+    renderDev(devs) {
+        this.ul.innerHTML = "";
+
+        devs.forEach(dev => {
+            this.addUser(dev)
+        })
+    }
+
 }
 
 
