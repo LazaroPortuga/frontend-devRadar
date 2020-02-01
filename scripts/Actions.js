@@ -84,6 +84,20 @@ class Actions {
         })
     }
 
+    addDataDev(data, condition = false){
+        let btns = document.querySelectorAll('button.action-edit')
+        
+        if(condition){
+            console.log(data)
+            btns = document.querySelectorAll('button.action-edit')[btns.length -1]
+            btns.dataset.info = JSON.stringify(data)
+            return
+        }
+
+        for(let indice = 0; indice < btns.length; indice++){
+            btns[indice].dataset.info = JSON.stringify(data[indice])
+        }
+    }
 
 }
 
