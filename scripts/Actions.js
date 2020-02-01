@@ -253,6 +253,14 @@ class Actions {
         })
     }
 
+    removeForm(){
+        let formCad = document.querySelector("#form-cad")
+        let formUp = document.querySelector("#form-up")
+
+        formCad.classList.remove("formDisabled")
+        formUp.classList.remove("formActive")
+    }
+
 }
 
 
