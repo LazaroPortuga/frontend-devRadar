@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/loading.css">
+    <title>Dev Radar</title>
+</head>
+<body>
+    <section id="container">
+        <aside>
+            <div id="form-cad">
+                <strong>Cadastrar</strong>
+                <form action="" id="form-data">
+                    <div class="input-block">
+                        <label for="github_username">Usuario Github</label>
+                        <input name="user_name"type="text" id="github_username" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="techs">Techs</label>
+                        <input name="techs"type="text" id="techs" required>
+                    </div>
+                    <div class="input-group">
+                        <div>
+                            <label for="latitude">Latitude</label>
+                            <input name="latitude" type="number"  step="any" id="latitude" required>
+                        </div>
+                        <div>
+                            <label for="longitude">Longitude</label>
+                            <input name="longitude" type="number"  step="any" id="longitude" required>
+                        </div>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+            <div id="form-up">
+                <strong>Editar</strong>
+                <form action="" id="form-data-up">
+                    <div class="input-block">
+                        <label for="github_username">Usuario Github</label>
+                        <input name="user_name"type="text" id="github_username" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="techs">Techs</label>
+                        <input name="techs"type="text" id="techs" required>
+                    </div>
+                    <div class="input-group">
+                        <div>
+                            <label for="latitude">Latitude</label>
+                            <input name="latitude" type="number"  step="any" id="latitude" required>
+                        </div>
+                        <div>
+                            <label for="longitude">Longitude</label>
+                            <input name="longitude" type="number"  step="any" id="longitude" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <button class="save"type="submit">Salvar</button>
+                        <button class="cancel" type="submit">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </aside>
+
+        <main>
+            <ul id="dev" class="disabled">
+                <div class="loading">
+                    <div class="lds-ripple"><div></div><div></div></div>
+                </div>
+            </ul>
+        </main>
+        
+    </section>
+    <script src="./scripts/Actions.js"></script>
+    <script src="./api/api.js"></script>
+</body>
+</html>
