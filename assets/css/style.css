@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   outline: 0;
+   box-sizing: border-box;
+}
+
+strong {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #999;
+    font-size: 19px;
+}
+
+body,html, #container {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #6931ca;
+}
+a:hover {
+    color: #7d40e7;
+}
+
+body {
+    background-color: #E5e6f0;
+    font-family: 'Roboto';
+}
+
+input, button {
+    font-family: 'Roboto';
+}
+
+section#container {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+aside {
+    width: 330px;
+    min-width: 330px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 14px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 5px ;
+}
+
+.input-block label, .input-group label {
+    color: #acacac;
+}
+
+aside .input-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-block{
+    margin-bottom: 20px;
+}
+
+.input-block input ,.input-group input {
+    width: 100%;
+    height: 32px;
+    font-size: 14px;
+    color: #666;
+    border: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    gap: 22px;
+}
+
+/* valida form */
+input.valida {
+    border-bottom: 1px solid #6931ca;
+}
+/* end valida form */
+
+
+button[type=submit] {
+    width: 100%;
+    border: 0;
+    margin-top: 30px;
+    background: #7d40e7;
+    border-radius: 2px;
+    padding: 15px 20px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type=submit]:hover {
+    background: #6931ca;
+}
+
+
+/* formação para a parte do main  */
+
+main {
+    flex: 1;
+}
+
+#dev {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    justify-content: center;
+    gap: 14px;
+    margin-left: 20px;
+
+}
+
+li {
+    list-style: none;
+}
+.dev-item {
+    /* width: 280px; */
+    background: white;
+    padding: 15px 20px;
+    border-bottom: 5px solid #6931ca;
+    border-radius: 2px;
+    box-shadow: 0 0 14px 0px rgba(0, 0, 0, 0.09);
+
+}
+
+.dev-info {
+    margin-left: 13px;
+}
+
+.dev-item header span {
+    color: #999;
+    font-size: 13px;
+}
+.dev-item header h3 {
+    color: #333;
+}
+
+.dev-item header img {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+}
+.dev-item header{
+    display: flex;
+    align-items: center;
+}
+
+.dev-item p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0;
+    color: #666;
+    font-weight: lighter;
+}
+
+
+/* ações para o formulario de cadastro e atualizações */
+
+#form-cad.formDisabled {
+    display: none;
+}
+#form-up.formActive {
+    display: block;
+}
+
+#form-up {
+    display: none;
+}
+
+button[type=submit].saved {
+    box-shadow: inset 0px 0px 0px 23px #49c531;
+    transition: all 0.5s;
+}
+
+button[type=submit].cancel {
+    background: #e74059;
+}
+
+button[type=submit].save {
+    background: #49c531;
+}
+
+button[type=submit].cancel:hover {
+    background: #bd3247;
+}
+
+button[type=submit].save:hover {
+    background: #3a9c26;
+}
+
+div.btn {
+    text-align: right;
+}
+
+button.action-edit {
+    padding: 3px 5px;
+    border: 0;
+    border-radius: 2px;
+    background: #6931ca;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+button.action-edit:hover {
+    transform: scale(1.1);
+} 
