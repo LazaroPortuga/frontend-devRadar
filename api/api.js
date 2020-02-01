@@ -20,7 +20,6 @@ class Api extends Actions {
         this.edit();
     }
 
-
     async save(bodyInfo) {
        let response = await fetch(`${this.url}/devs`, {
             method: 'POST',
@@ -34,7 +33,6 @@ class Api extends Actions {
         let data = await response.json();
         return data
     }
-
 
     async update(bodyInfo){
         let response = await fetch(`${this.url}/devs`, {
