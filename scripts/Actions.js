@@ -106,6 +106,34 @@ class Actions {
         })
     }
 
+    editOne(btn){
+        let formCad = document.querySelector("#form-cad")
+        let formUp = document.querySelector("#form-up")
+
+        btn.addEventListener('click',(event)=> {
+            this.actionsBntFormEdition()
+            let { techs, github_username, _id, location } = this.infoUser(event)
+            this.addInput(_id)
+            
+            formCad.classList.add("formDisabled")
+            formUp.classList.add("formActive") 
+            Actions.blockInputs()
+        
+            let inputTechs = document.querySelector('#form-data-up #techs'); 
+            let inputGithub_username = document.querySelector('#form-data-up #github_username'); 
+            let inputLatitude = document.querySelector('#form-data-up #latitude'); 
+            let inputLongitude = document.querySelector('#form-data-up #longitude'); 
+            
+            inputLatitude.value = location.coordinates[0]
+            inputLongitude.value = location.coordinates[1]
+            inputGithub_username.value  = github_username 
+
+            inputTechs.focus()
+            inputTechs.style.borderBottom = "1px solid #6931ca"
+            inputTechs.value = this.techsParser(techs)
+        })
+    }
+
 }
 
 
