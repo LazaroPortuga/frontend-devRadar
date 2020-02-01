@@ -16,7 +16,7 @@ class Api extends Actions {
             this.renderDev(data)
          } 
  
-        this.faz(data)
+        this.addDataDev(data)
         this.edit();
     }
 
