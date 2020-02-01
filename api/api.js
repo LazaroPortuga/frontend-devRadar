@@ -36,6 +36,20 @@ class Api extends Actions {
     }
 
 
+    async update(bodyInfo){
+        let response = await fetch(`${this.url}/devs`, {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(bodyInfo)
+        })
+
+        let data = await response.json();
+        return data
+    }
+
 }
 
 
