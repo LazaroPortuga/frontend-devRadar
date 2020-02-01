@@ -99,6 +99,13 @@ class Actions {
         }
     }
 
+    edit(){
+        let btns = document.querySelectorAll('button.action-edit')
+        btns.forEach(btn => {
+            this.editOne(btn)
+        })
+    }
+
 }
 
 
