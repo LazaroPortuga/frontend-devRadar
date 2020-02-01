@@ -229,6 +229,30 @@ class Actions {
         formUp.appendChild(div)
     }
 
+    updateInfo(data){
+        let newId = data._id
+        let devs = document.querySelectorAll('button.action-edit')
+
+        devs.forEach(dev=>{
+           let { _id } =  JSON.parse(dev.dataset.info)
+
+           if(_id === newId){
+
+                this.ul.querySelectorAll('li').forEach(lis=>{
+                    if(newId == lis.dataset._id){
+                        lis.querySelector('button.action-edit')
+                        lis.querySelector('span').innerHTML = data.techs
+
+                        this.removeForm();
+                    }
+                })
+
+            }else {
+                console.log("caiu no else")
+            }
+        })
+    }
+
 }
 
 
