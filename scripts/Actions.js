@@ -191,6 +191,11 @@ class Actions {
         })
     }
 
+    techsParser(techs) {
+        let result = techs.join(',')
+        return result
+    }
+
 }
 
 
