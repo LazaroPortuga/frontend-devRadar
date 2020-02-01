@@ -196,6 +196,17 @@ class Actions {
         return result
     }
 
+    infoNavigator(){
+        const navegadores = ['Chrome','Firefox', 'MSIE','Safari', 'Camino', 'OP', 'Op'];
+
+        let nvt = navegadores.filter(nav => {
+            if(navigator.userAgent.indexOf(nav) > -1) return nav;
+        });
+
+        nvt == "Chrome,Safari" ? nvt = nvt.toString().substr(0, 6) : nvt;
+        alert(`seu navegador é o ${nvt}`) 
+    }
+
 }
 
 
