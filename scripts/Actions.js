@@ -215,6 +215,20 @@ class Actions {
         })
     }
 
+    addInput(id){
+        let formUp = document.querySelector("#form-data-up");
+
+        let div = document.createElement('div')
+        let input = document.createElement('input')
+        input.id = "id"
+        input.name = "_id"
+        input.type = 'hidden'
+        input.value = id
+
+        div.appendChild(input)
+        formUp.appendChild(div)
+    }
+
 }
 
 
