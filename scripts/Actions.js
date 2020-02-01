@@ -10,6 +10,21 @@ class Actions {
         this.geoLocation();
     }
 
+    geoLocation(){
+        let lat = document.querySelector("#latitude");
+        let long = document.querySelector("#longitude") 
+
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition((position)=>{
+
+                lat.value = position.coords.latitude
+                long.value = position.coords.longitude
+            })
+          } else {
+            alert("I'm sorry, but geolocation services are not supported by your browser.");
+        }
+    }
+
 
 }
 
