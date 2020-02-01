@@ -25,6 +25,20 @@ class Actions {
         }
     }
 
+    valueInputs(inputs){
+        let inputsValue = {}
+        inputs.forEach(item=> {
+            if(item.value == ''){
+                item.classList.add("valida")
+                item.setAttribute('placeholder', "Campo não pode ser vazio :)");
+                return false;
+            }
+            inputsValue[item.name] = item.value
+        })
+
+        return inputsValue
+    }
+
 
 }
 
